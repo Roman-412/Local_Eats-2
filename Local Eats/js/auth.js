@@ -26,18 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const handleSearch = () => {
             const query = searchInput.value.trim();
             if (query) {
-                const isInsideHTML = window.location.pathname.includes('/HTML/');
-                let searchPath = "search_results.html";
+                const path = window.location.pathname.toLowerCase();
+                const isInsideHTML = path.includes('/html/');
+                let searchPath = isInsideHTML ? "search_results.html" : "HTML/search_results.html";
 
-                // If we are at the root (index.html)
-                if (!isInsideHTML) {
-                    searchPath = "HTML/search_results.html";
-                } else if (window.location.pathname.includes('/shops/') ||
-                    window.location.pathname.includes('/Breakfast/') ||
-                    window.location.pathname.includes('/Lunch/') ||
-                    window.location.pathname.includes('/Diner/') ||
-                    window.location.pathname.includes('/Snacks/')) {
-                    searchPath = "../search_results.html";
+                // Adjustment for different folder depths
+                const subfolders = ['/snacks/', '/breakfast/', '/lunch/', '/diner/', '/shops/'];
+                for (const folder of subfolders) {
+                    if (path.includes(folder)) {
+                        searchPath = "../search_results.html";
+                        break;
+                    }
                 }
 
                 window.location.href = `${searchPath}?search=${encodeURIComponent(query)}`;
@@ -57,16 +56,17 @@ function logout() {
     localStorage.removeItem("username");
     localStorage.removeItem("cart");
 
-    const isInsideHTML = window.location.pathname.includes('/HTML/');
+    const path = window.location.pathname.toLowerCase();
+    const isInsideHTML = path.includes('/html/');
     let loginPath = isInsideHTML ? "Login.html" : "HTML/Login.html";
 
     // Adjustment for different folder depths
-    if (window.location.pathname.includes('/Snacks/') ||
-        window.location.pathname.includes('/Breakfast/') ||
-        window.location.pathname.includes('/Lunch/') ||
-        window.location.pathname.includes('/Diner/') ||
-        window.location.pathname.includes('/shops/')) {
-        loginPath = "../Login.html";
+    const subfolders = ['/snacks/', '/breakfast/', '/lunch/', '/diner/', '/shops/'];
+    for (const folder of subfolders) {
+        if (path.includes(folder)) {
+            loginPath = "../Login.html";
+            break;
+        }
     }
 
     window.location.href = loginPath;

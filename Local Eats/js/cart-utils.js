@@ -14,16 +14,18 @@ async function addToCart(id, title, image, price, rating, description) {
         cartImage = cartImage.replace(/ /g, "%20");
     }
 
-    const isInsideHTML = window.location.pathname.includes('/HTML/');
+    // Normalize path for robust redirection
+    const path = window.location.pathname.toLowerCase();
+    const isInsideHTML = path.includes('/html/');
     let cartPagePath = isInsideHTML ? "addtocard.html" : "HTML/addtocard.html";
-
-    // Deeper folder adjustment
-    if (window.location.pathname.includes('/Snacks/') ||
-        window.location.pathname.includes('/Breakfast/') ||
-        window.location.pathname.includes('/Lunch/') ||
-        window.location.pathname.includes('/Diner/') ||
-        window.location.pathname.includes('/shops/')) {
-        cartPagePath = "../addtocard.html";
+    
+    // Check if we're in a subdirectory of HTML
+    const subfolders = ['/snacks/', '/breakfast/', '/lunch/', '/diner/', '/shops/'];
+    for (const folder of subfolders) {
+        if (path.includes(folder)) {
+            cartPagePath = "../addtocard.html";
+            break;
+        }
     }
 
     if (userId) {
