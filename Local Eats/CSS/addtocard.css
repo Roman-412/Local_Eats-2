@@ -1,0 +1,439 @@
+body{
+    background-color:#0D121C;
+    color: white;
+}
+
+.content-area {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.banner-placeholder {
+    height: 20px; 
+    width: 100%;
+    margin: 20px 0 40px 0;
+    font-size: x-large;
+    margin-right: 200px;
+}
+
+
+.controls-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.checkout-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgb(24, 27, 51);
+    padding: 20px;
+}
+
+/* --- Header --- */
+.checkout-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* --- Separator --- */
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+.order-summary-section {
+    padding: 10px 0;
+}
+
+.order-summary-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #f9f9f9;
+}
+
+.food-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.food-card {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.food-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.food-info {
+    flex-grow: 1;
+}
+
+.food-name {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.food-qty {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.food-price {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* --- Delivery Type Card --- */
+.delivery-type-section h2, .address-section h2, .promo-section h2, .price-details-section h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.radio-button-card {
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Hide the actual radio button */
+.radio-button-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+
+
+.radio-button-card input[type="radio"]:checked + .card-content .type-name::before {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff6600;
+    border: 3px solid white;
+    box-shadow: 0 0 0 1px #ff6600;
+    margin-right: 8px;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.type-name {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.type-name::before {
+    /* Unselected radio circle */
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #999;
+    margin-right: 8px;
+}
+
+.charge-details {
+    color: white;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus {
+  outline: none;
+  border-color: #ff6600;
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 2px rgba(255, 102, 0, 0.2);
+}
+
+.inline-fields {
+  display: flex;
+  gap: 12px;
+}
+
+.inline-fields input {
+  width: calc(50% - 6px);
+  margin-bottom: 12px;
+}
+
+/* --- Instructions & Tip --- */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.tip-section h3 {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.tip-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tip-btn {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.tip-btn.selected {
+    background-color: #ff6600;
+    border-color: #ff6600;
+    color: white;
+}
+
+#custom-tip {
+    width: 100px;
+    text-align: center;
+    margin: 0;
+}
+
+/* --- Promo Section --- */
+.promo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.promo-header a {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.promo-input-group {
+    display: flex;
+}
+
+#promo-input {
+    flex-grow: 1;
+    margin-bottom: 0;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.apply-btn {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- Price Details --- */
+.price-details-section {
+    padding-top: 10px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color:white;
+}
+
+.green-text {
+    color: green;
+    font-weight: bold;
+}
+
+.total-amount-line {
+    display: grid;
+    grid-template-areas: "note total total-amount";
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #ddd;
+}
+
+.vat-tax-note {
+    font-size: 12px;
+    color: white;
+}
+
+.total-text {
+    grid-area: total;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.final-total {
+    grid-area: total-amount;
+    font-weight: bold;
+    font-size: 20px;
+    color:white;
+}
+
+/* --- Place Order Button --- */
+.place-order-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    
+}
+/* ============================================
+   TABLET & MOBILE RESPONSIVE DESIGN
+   ============================================ */
+
+/* Large Tablets & Small Laptops (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .cart-container {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .cart-items-section {
+        flex: 1.5;
+    }
+
+    .price-details-section {
+        flex: 1;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .location-input, .search-bar {
+        width: 100%;
+        max-width: none;
+        order: 3;
+    }
+
+    .search-bar {
+        order: 4;
+    }
+
+    .cart-container {
+        flex-direction: column;
+    }
+
+    .cart-item {
+        padding: 15px;
+    }
+
+    .item-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .price-details-section {
+        margin-bottom: 80px; /* Space for fixed button */
+    }
+
+    .place-order-btn {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        width: auto;
+        z-index: 100;
+        box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .logo {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .auth-btn, .login {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .item-image {
+        width: 100%;
+        height: 150px;
+    }
+
+    .quantity-controls {
+        align-self: flex-end;
+    }
+}

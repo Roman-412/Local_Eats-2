@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food App Home - Orange & Black</title>
+    <link rel="icon" type="image/x-icon" href="./assets/LE photo.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">Local Eats</div>
+
+        <div class="location-input">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" value="Chennai" placeholder="Enter your location">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="auth-buttons-container" id="auth-buttons-container">
+            <div class="auth-btn">
+                <a href="./HTML/sign_up.html">SIGN UP</a>
+            </div>
+            <div class="login">
+                <a href="./HTML/Login.html">LOGIN</a>
+            </div>
+        </div>
+        <div class="user-profile-container" id="user-profile-container"
+            style="display: none; align-items: center; gap: 15px;">
+            <span id="welcome-message" style="color: white; font-weight: 600;"></span>
+            <button onclick="logout()"
+                style="background: var(--primary-orange); color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold;">Logout</button>
+        </div>
+        <div class="login">
+            <a href="./HTML/Vendor_Registration.html">Register</a>
+        </div>
+    </header>
+
+    <div class="content-area">
+        <div class="banner-placeholder">Food order and Roadside food shops</div>
+
+        <div class="controls-row">
+            <div class="filters">
+                <button class="filter-btn">
+                    <a href="./HTML/filters.html"> Fliters <i class="fas fa-sliders-h"></i> </a>
+                </button>
+                <a href="./HTML/Veg_food.html"><button class="filter-tag active">veg</button></a>
+                <a href="./HTML/Non_veg.html"><button class="filter-tag non-veg">Non veg</button></a>
+            </div>
+            <div class="cart-icon">
+                <a href="./HTML/addtocard.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
+            </div>
+        </div>
+        <div class="beg">
+            <img src="./assets/Gemini_Generated_Image_1ruj7q1ruj7q1ruj.png" alt="img">
+
+        </div>
+
+        <div class="main-content-body">
+
+            <section class="section-container">
+                <h2 class="section-title">order our best categories options</h2>
+                <div class="horizontal-scroll-container">
+                    <div class="category-list">
+                        <div class="category-item">
+                            <div class="category-circle-img">
+                                <a href="./HTML/Breakfast/Breakfast.html"><img src="./assets/Home/Breakfast.webp"
+                                        alt="Pizza Category"></a>
+                            </div>
+                            <p class="category-name">Breakfast</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle-img">
+                                <a href="./HTML/Lunch/Lunch.html"><img src="./assets/Home/lunch-removebg-preview.png"
+                                        alt="Burger Category"></a>
+                            </div>
+                            <p class="category-name">Lunch</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle-img">
+                                <a href="./HTML/Snacks/Snacks.html"><img src="./assets/Home/snacks.jpg"
+                                        alt="Sushi Category"></a>
+                            </div>
+                            <p class="category-name">snacks</p>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle-img">
+                                <a href="./HTML/Diner/diner.html"> <img src="./assets/Home/diner.jpg"
+                                        alt="Desserts Category"></a>
+                            </div>
+                            <p class="category-name">Diner</p>
+                        </div>
+                    </div>
+                    <div class="scroll-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+            </section>
+            <section class="section-container">
+                <h2 class="section-title">road side shops</h2>
+                <div class="horizontal-scroll-container">
+                    <div class="shop-list">
+                        <div class="shop-item">
+                            <div class="shop-image-block">
+                                <a href="./HTML/shops/shop_1.html"> <img src="./assets/shops image/road shop 1.jpg"
+                                        alt="Local Taco Stand"></a>
+                            </div>
+                            <p class="shop-name">Rasam River</p>
+                        </div>
+                        <div class="shop-item">
+                            <div class="shop-image-block">
+                                <a href="./HTML/shops/shop_2.html"> <img src="./assets/shops image/road side shop 3.jpg"
+                                        alt="Classic Hot Dog Cart"></a>
+                            </div>
+                            <p class="shop-name">Vachi Thini Po</p>
+                        </div>
+                        <div class="shop-item">
+                            <div class="shop-image-block">
+                                <a href="./HTML/shops/shop-3.html"><img src="./assets/shops image/road side shop 4.jpg"
+                                        alt="Bubble Tea Stall"></a>
+                            </div>
+                            <p class="shop-name">Come, Eat and Go</p>
+                        </div>
+                        <div class="shop-item">
+                            <div class="shop-image-block">
+                                <a href="./HTML/shops/shop-4.html"> <img src="./assets/shops image/roadside2.jpg"
+                                        alt="Churro Cart"></a>
+                            </div>
+                            <p class="shop-name">2 Idly 1 Vada</p>
+                        </div>
+                    </div>
+                    <div class="scroll-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+            </section>
+
+            <div class="header">ORDER OUR BEST FOOD OPTIONS</div>
+            <div class="menu-container">
+
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Breakfast/pongal.html"><img id="productImage"
+                                src="./assets/Break%20fast/images%201.jpg" alt="Pongal"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious Pongal</div>
+                        <h3 class="title">Pongal Sambar</h3>
+                        <div class="rating">★★★★☆ 4.5</div>
+                        <p class="description">Traditional South Indian breakfast with rice-lentil porridge and spicy lentil stew.</p>
+                        <div class="price">₹50</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(1, 'Pongal Sambar', './assets/Break fast/images 1.jpg', 50, '★★★★☆ 4.5', 'Traditional South Indian breakfast with rice-lentil porridge and spicy lentil stew.')">Add</button>
+                </div>
+
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Breakfast/ideyapaem.html"> <img
+                                src="./assets/Break%20fast/idiyappam-coconut-milk.jpg" alt="Cheese Burst Pizza"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious idiyappam </div>
+                        <h3 class="title">idiyappam coconut milk</h3>
+                        <div class="rating">★★★★☆ 4.5</div>
+                        <p class="description">Delicate steamed rice string hoppers served with sweet and creamy coconut milk.</p>
+                        <div class="price">₹45</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(2, 'idiyappam coconut milk', './assets/Break fast/idiyappam-coconut-milk.jpg', 45, '★★★★☆ 4.5', 'Delicate steamed rice string hoppers served with sweet and creamy coconut milk.')">Add</button>
+                </div>
+
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Lunch/chiken Briyani.html"> <img src="./assets/Lunch/chiken%20Biryani.jpg"
+                                alt="Veg Biryani"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious Chiken Biryani </div>
+                        <h3 class="title">Chiken Biryani</h3>
+                        <div class="rating">★★★★☆ 4.6</div>
+                        <p class="description">Aromatic basmati rice layered with succulent chicken and exotic spices.</p>
+                        <div class="price">₹120</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(3, 'Chiken Biryani', './assets/Lunch/chiken Biryani.jpg', 120, '★★★★☆ 4.6', 'Aromatic basmati rice layered with succulent chicken and exotic spices.')">Add</button>
+                </div>
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Lunch/veg pulao.html"><img src="./assets/Lunch/veg%20pulao.jpg"
+                                alt="Veg Biryani"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious onion Dosa</div>
+                        <h3 class="title">veg pulao</h3>
+                        <div class="rating">★★★★☆ 4.6</div>
+                        <p class="description">Fragrant basmati rice cooked with fresh seasonal vegetables and mild spices.</p>
+                        <div class="price">₹120</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(4, 'veg pulao', './assets/Lunch/veg pulao.jpg', 120, '★★★★☆ 4.6', 'Fragrant basmati rice cooked with fresh seasonal vegetables and mild spices.')">Add</button>
+                </div>
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Snacks/masala_vada.html"> <img src="./assets/Snacks/masala%20vada.jpg"
+                                alt="Coconut Chutney"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious masala vada</div>
+                        <h3 class="title">Masala vada</h3>
+                        <div class="rating">★★★★☆ 4.5</div>
+                        <p class="description">Crunchy and spicy deep-fried lentil patties with onions and herbs.</p>
+                        <div class="price">₹40</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(5, 'Masala vada', './assets/Snacks/masala vada.jpg', 40, '★★★★☆ 4.5', 'Crunchy and spicy deep-fried lentil patties with onions and herbs.')">Add</button>
+                </div>
+
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Snacks/gulab_jamun.html"><img src="./assets/Snacks/gulab%20jamun.jpg"
+                                alt="Cheese Burst Pizza"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious gulab jamun</div>
+                        <h3 class="title">Gulab jamun</h3>
+                        <div class="rating">★★★★☆ 4.5</div>
+                        <p class="description">Soft, melt-in-the-mouth milk dumplings soaked in rose-flavored sugar syrup.</p>
+                        <div class="price">₹45</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(6, 'Gulab jamun', './assets/Snacks/gulab jamun.jpg', 45, '★★★★☆ 4.5', 'Soft, melt-in-the-mouth milk dumplings soaked in rose-flavored sugar syrup.')">Add</button>
+                </div>
+
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Snacks/samosa.html"><img src="./assets/Snacks/samosa.jpg" alt="Veg Biryani"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious samosa</div>
+                        <h3 class="title">Samosa</h3>
+                        <div class="rating">★★★★☆ 4.6</div>
+                        <p class="description">Crispy triangular pastry filled with spiced potatoes and peas.</p>
+                        <div class="price">₹30</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(7, 'Samosa', './assets/Snacks/samosa.jpg', 30, '★★★★☆ 4.6', 'Crispy triangular pastry filled with spiced potatoes and peas.')">Add</button>
+                </div>
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Snacks/payasam.html"> <img src="./assets/Snacks/payasam.jpeg"
+                                alt="Veg Biryani"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious payasam</div>
+                        <h3 class="title">payasam</h3>
+                        <div class="rating">★★★★☆ 4.6</div>
+                        <p class="description">Rich and creamy traditional South Indian milk pudding with vermicelli or lentils.</p>
+                        <div class="price">₹60</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(8, 'payasam', './assets/Snacks/payasam.jpeg', 60, '★★★★☆ 4.6', 'Rich and creamy traditional South Indian milk pudding with vermicelli or lentils.')">Add</button>
+                </div>
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Diner/chicken_noodles.html"><img src="./assets/Dinner/chicken%20noodles.jpg"
+                                alt="Coconut Chutney"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious</div>
+                        <h3 class="title">Chicken noodles</h3>
+                        <div class="rating">★★★★☆ 4.5</div>
+                        <p class="description">Stir-fried noodles with tender chicken pieces, crisp vegetables, and savory sauces.</p>
+                        <div class="price">₹120</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(9, 'Chicken noodles', './assets/Dinner/chicken noodles.jpg', 120, '★★★★☆ 4.5', 'Stir-fried noodles with tender chicken pieces, crisp vegetables, and savory sauces.')">Add</button>
+                </div>
+
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Diner/chicken_shawarma.html"> <img
+                                src="./assets/Dinner/Chicken-Shawarma-Recipe.jpg" alt="Cheese Burst Pizza"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious chicken shawarma</div>
+                        <h3 class="title">Chicken shawarma</h3>
+                        <div class="rating">★★★★☆ 4.5</div>
+                        <p class="description">Grilled marinated chicken wrapped in soft pita bread with garlic sauce and pickles.</p>
+                        <div class="price">₹90</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(10, 'Chicken shawarma', './assets/Dinner/Chicken-Shawarma-Recipe.jpg', 90, '★★★★☆ 4.5', 'Grilled marinated chicken wrapped in soft pita bread with garlic sauce and pickles.')">Add</button>
+                </div>
+
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Diner/masala_dosa.html"><img src="./assets/Dinner/masala dosa.jpg "
+                                alt="Veg Biryani"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious masala dosa</div>
+                        <h3 class="title">Masala Dosa </h3>
+                        <div class="rating">★★★★☆ 4.6</div>
+                        <p class="description">Crispy rice crepe filled with a delicious spiced potato masala.</p>
+                        <div class="price">₹70</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(11, 'Masala Dosa', './assets/Dinner/masala dosa.jpg', 70, '★★★★☆ 4.6', 'Crispy rice crepe filled with a delicious spiced potato masala.')">Add</button>
+                </div>
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Diner/chicken_rice.html"><img src="./assets/Dinner/chicken%20rice.jpg"
+                                alt="Veg Biryani"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious chicken rice</div>
+                        <h3 class="title">Chicken Rice</h3>
+                        <div class="rating">★★★★☆ 4.6</div>
+                        <p class="description">Flavorful stir-fried rice with seasoned chicken bits, egg, and fresh veggies.</p>
+                        <div class="price">₹120</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(12, 'Chicken Rice', './assets/Dinner/chicken rice.jpg', 120, '★★★★☆ 4.6', 'Flavorful stir-fried rice with seasoned chicken bits, egg, and fresh veggies.')">Add</button>
+                </div>
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Diner/chicken_naan.html"> <img
+                                src="./assets/Dinner/easy-butter-chicken-naan.jpg" alt="Veg Biryani"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious butter chicken naan</div>
+                        <h3 class="title">Butter chickennaan</h3>
+                        <div class="rating">★★★★☆ 4.6</div>
+                        <p class="description">Soft and fluffy naan bread served with rich, creamy, and buttery tomato-based chicken gravy.</p>
+                        <div class="price">₹100</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(13, 'Butter chicken naan', './assets/Dinner/easy-butter-chicken-naan.jpg', 100, '★★★★☆ 4.6', 'Soft and fluffy naan bread served with rich, creamy, and buttery tomato-based chicken gravy.')">Add</button>
+                </div>
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Diner/parotta.html"><img src="./assets/Dinner/parotta.jpg"
+                                alt="Veg Biryani"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious Parotta</div>
+                        <h3 class="title">Parotta</h3>
+                        <div class="rating">★★★★☆ 4.6</div>
+                        <p class="description">Layered and flakey flatbread made from refined flour, perfect with spicy salna.</p>
+                        <div class="price">₹30</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(14, 'Parotta', './assets/Dinner/parotta.jpg', 30, '★★★★☆ 4.6', 'Layered and flakey flatbread made from refined flour, perfect with spicy salna.')">Add</button>
+                </div>
+                <div class="food-card">
+                    <div class="image-box">
+                        <a href="./HTML/Snacks/pani_puri.html"><img src="./assets/Snacks/pani%20puri.jpg"
+                                alt="Veg Biryani"></a>
+                    </div>
+                    <div class="details-box">
+                        <div class="heart-icon">Delicious Pani Puri</div>
+                        <h3 class="title">pani puri</h3>
+                        <div class="rating">★★★★☆ 4.6</div>
+                        <p class="description">Crispy hollow puris filled with spiced potato and tangy-spicy flavored water.</p>
+                        <div class="price">₹30</div>
+                    </div>
+                    <button class="add-button"
+                        onclick="addToCart(15, 'pani puri', './assets/Snacks/pani puri.jpg', 30, '★★★★☆ 4.6', 'Crispy hollow puris filled with spiced potato and tangy-spicy flavored water.')">Add</button>
+                </div>
+
+            </div>
+            <footer class="main-footer">
+                <div class="footer-content-wrapper">
+
+                    <div class="footer-block">
+                        <div class="footer-title logo">Local Eats</div>
+                        <div class="footer-link-list">
+                            <a href="./HTML/about.html#about">About Us</a>
+                            <a href="./HTML/about.html#careers">Careers</a>
+                            <a href="./HTML/about.html#partner">Partner with Us</a>
+                            <a href="./HTML/about.html#help">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-block">
+                        <div class="footer-title">Help</div>
+                        <div class="footer-link-list">
+                            <a href="./HTML/about.html#help">Help & FAQs</a>
+                            <a href="./HTML/about.html#help">Track Order</a>
+                            <a href="./HTML/about.html#help">Report Issue</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-block">
+                        <div class="footer-title">Legal</div>
+                        <div class="footer-link-list">
+                            <a href="./HTML/about.html#terms">Terms & Conditions</a>
+                            <a href="./HTML/about.html#privacy">Privacy Policy</a>
+                        </div>
+
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-copyright">
+                    &copy; 2025 Local Eats. All rights reserved.
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<!-- Location Modal -->
+<div id="locationModal" class="location-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Select Your Location</h3>
+            <span class="close-modal">&times;</span>
+        </div>
+        <div class="map-container" style="overflow-y: auto;">
+            <!-- Modal Location Search -->
+            <div class="modal-search"
+                style="width: 90%; max-width: 800px; margin-bottom: 15px; display: flex; gap: 10px;">
+                <input type="text" id="modalLocationSearch" placeholder="Search for area (e.g. Adyar, Chennai)"
+                    style="flex: 1; padding: 12px; border-radius: 8px; border: 1px solid var(--border-dark); background: var(--surface-dark); color: white; outline: none;">
+                <button id="searchAreaBtn"
+                    style="padding: 10px 20px; background: var(--primary-orange); border: none; border-radius: 8px; color: white; cursor: pointer; font-weight: bold;">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div id="map">
+                <iframe id="mapFrame" src="https://maps.google.com/maps?q=Chennai&output=embed" width="100%"
+                    height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <button class="confirm-location-btn">Confirm Location</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/location-map.js"></script>
+<script src="js/cart-utils.js"></script>
+
+
+</html>

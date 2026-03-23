@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Eats | Secure Payment</title>
+  <link rel="stylesheet" href="../CSS/pay_details.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="page">
+    <div class="card">
+
+      <header class="header">
+        <div class="logo">Local Eats</div>
+        <div>
+          <h1>Checkout</h1>
+          <p>Complete your payment securely</p>
+        </div>
+      </header>
+
+      <div class="content">
+
+        <div class="left">
+          <div class="group">
+            <h3>Payment Method</h3>
+            <div class="methods">
+              <button class="method active" data-method="upi">UPI</button>
+              <button class="method" data-method="card">Card</button>
+              <button class="method" data-method="cod">Cash on Delivery</button>
+            </div>
+
+            <div id="card-box" class="hidden">
+              <input id="card" type="text" placeholder="Card Number" maxlength="16"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+              <div class="row">
+                <input id="expiry" type="text" placeholder="MM/YY" maxlength="5" oninput="formatExpiry(this)">
+                <input id="cvv" type="password" placeholder="CVV" maxlength="3"
+                  oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+              </div>
+            </div>
+          </div>
+
+          <button id="payBtn" class="pay">Pay ₹<span id="pay-amount">0</span></button>
+        </div>
+
+        <div class="right">
+          <h3>Order Summary</h3>
+          <div id="order-items">
+            <!-- Cart items will be loaded dynamically -->
+          </div>
+          <div class="item">
+            <span>Subtotal</span>
+            <span>₹<span id="summary-subtotal">0</span></span>
+          </div>
+          <div class="item">
+            <span>Delivery</span>
+            <span>₹<span id="summary-delivery">0</span></span>
+          </div>
+          <div class="item">
+            <span>Tip</span>
+            <span>₹<span id="summary-tip">0</span></span>
+          </div>
+          <div class="total">
+            <span>Total</span>
+            <span>₹<span id="summary-total">0</span></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="upiModal" class="modal">
+    <div class="modal-box">
+      <h3>Pay using UPI</h3>
+      <div class="qr">
+        <img src="../assets/Qrcode.jpeg">
+      </div>
+      <button id="upiConfirm">Confirm Payment</button>
+      <button id="upiClose" class="outline">Cancel</button>
+    </div>
+  </div>
+
+
+  <script src="../js/pay_details.js"></script>
+
+
+</body>
+
+</html>
